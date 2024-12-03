@@ -1,0 +1,61 @@
+section {
+  background: #f7f7f7;
+  height: 320px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+section h2 {
+  color: #f62f00;
+}
+#Events {
+  display: flex;
+  justify-content: space-between;
+}
+#botoes {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+}
+#carrossel-eventinhos {
+  display: flex;
+  max-width: 1000px;
+  /* width: min-content; */
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* width: 100%; */
+}
+.eventinho {
+  display: grid;
+  gap: 10%;
+  flex: 0 0 25%;
+  scroll-snap-align: start;
+  /* margin-right: 20px; */
+  justify-content: left;
+  box-sizing: border-box;
+  padding: 4px;
+  transition: transform 0.5s ease-in-out;
+}
+.eventinho img {
+  /* flex: 1 0 100%; */
+  border-radius: 5px;
+  width: 195px;
+  height: 110px;
+}
+.eventinho p {
+  font-family: "Aeonik-bold";
+  max-width: 20ch;
+  text-align: start;
+  text-transform: uppercase;
+  color: #f62f00;
+}
+.eventinho span {
+  color: #822b1b;
+  max-width: 20ch;
+}
+
+#botoes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

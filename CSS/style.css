@@ -1,0 +1,20 @@
+@import url(./header.css);
+@import url(./main.css);
+@import url(./footer.css);
+@import url(./section.css);
+body{
+  margin: 0;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height: 180vh;
+}
+.container main{
+  flex: 1 1 0;
+}
+@media (max-width: 1350px) and (max-height: 800px){
+  .container{
+    min-height: 250vh;
+  }
+}

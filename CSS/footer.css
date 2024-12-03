@@ -1,0 +1,35 @@
+footer{
+  display: grid;
+  background-color: #F62F00;
+  width: 1hw;
+  height: 190px;
+  padding: 50px 50px 10px 50px;
+  margin-top: 10%;
+}
+footer p{
+  color: #F7F7F7;
+  font-size: small;
+}
+#slogan{
+  display: grid;
+  width: 168px;
+ 
+  align-items: center;
+}
+ 
+#linha{
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: 1px;
+  background-color: #F7F7F7;
+}
+#direitos{
+  text-align: center;
+  align-self: center;
+}
+@media (max-width: 1350px){
+  #linha{
+    width: 1190px;
+  }
+}
