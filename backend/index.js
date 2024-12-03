@@ -8,11 +8,9 @@ app.use(cors());
 const events = [
   {
     id: 1,
-    name: "Encruzilhada Na Gira - Ocupação Espaço Poste",
-    description: "O espetáculo 'Uma encruzilhada nas giras que o mundo dá', ganha vida pelo grupo de teatro A Kambada Preta",
-    image: "https://images.sympla.com.br/674b4a8780078-lg.jpg",  
-    startDate: "2024-12-07",
-    endDate: "2024-12-07",
+    name: "No Ar Coquetel Molotov",
+    date: "SAT · DEZ 07 · 16:00",
+    image: "file:///C:/Users/rjoao/OneDrive/Área%20de%20Trabalho/MangueTown%201.2/IMG/section/Events/Coquetel%20Event.jpg",  
   },
   {
     id: 2,
