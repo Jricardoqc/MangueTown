@@ -15,9 +15,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       eventElement.innerHTML = `
         <img src="http://localhost:5000${event.image}" alt="${event.name}">
-        <span class="data">${event.date}</span>
-        <p>${event.name}</p>
-        <span>${event.location}</span>
+        <div id="descricao-eventinho">
+          <span class="data">${event.date}</span>
+          <p>${event.name}</p>
+          <span>${event.location}</span>
+        </div>
       `;
 
       carrossel.appendChild(eventElement);
