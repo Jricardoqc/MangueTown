@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       eventElement.classList.add("eventinho");
 
       eventElement.innerHTML = `
-        <img src="${event.image}" alt="${event.name}">
+        <img src="http://localhost:5000${event.image}" alt="${event.name}">
         <span class="data">${event.date}</span>
         <p>${event.name}</p>
         <p>${event.startDate}</p>
