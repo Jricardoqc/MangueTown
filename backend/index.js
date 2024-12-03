@@ -4,14 +4,16 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
- 
+app.use("/images", express.static("public/images"));
+
+
 const events = [
   {
     id: 1,
-    name: "No Ar Coquetel Molotov",
+    name: "natal",
     date: "SAT · DEZ 07 · 16:00",
-    image: "file:///C:/Users/rjoao/OneDrive/Área%20de%20Trabalho/MangueTown%201.2/IMG/section/Events/Coquetel%20Event.jpg",
-    location: "Campus UFPE - Recife, PE",  
+    image: "/images/abertura-natal.jpg",
+    location: "Campus UFPE - Recife, PE",  
   },
   {
     id: 2,
