@@ -53,7 +53,10 @@ section h2 {
   color: #822b1b;
   max-width: 20ch;
 }
-
+.data{
+  font-size: 12px;
+  font-family: "Aeonik-bold";
+}
 #botoes button {
   background: none;
   border: none;
