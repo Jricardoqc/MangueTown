@@ -13,7 +13,6 @@ footer p{
 #slogan{
   display: grid;
   width: 168px;
- 
   align-items: center;
 }
  
@@ -27,9 +26,4 @@ footer p{
 #direitos{
   text-align: center;
   align-self: center;
-}
-@media (max-width: 1350px){
-  #linha{
-    width: 1190px;
-  }
 }
