@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         <img src="${event.image}" alt="${event.name}">
         <p>${event.name}</p>
         <span>${event.description}</span>
+        <p>${event.startDate}</p>
+        <p>${event.endDate}</p>
+
       `;
 
       carrossel.appendChild(eventElement);
