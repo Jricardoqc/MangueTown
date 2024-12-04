@@ -71,3 +71,6 @@ section h2 {
   border: none;
   cursor: pointer;
 }
+#more-options{
+  display: grid;
+}
