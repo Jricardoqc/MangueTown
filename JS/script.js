@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const carrossel = document.getElementById("carrossel-eventinhos");
+  const carrossel = document.getElementById("carrossel-eventinhos");  
+  const verMaisButton = document.createElement("button");
+
+  verMaisButton.id = "ver-mais-btn";
+  verMaisButton.textContent = "Ver mais eventos";
+  verMaisButton.style.display = "none"; 
+  verMaisButton.style.marginTop = "20px";
+  verMaisButton.addEventListener("click", () => {
+    window.location.href = "/events-page.html";  
+  });
+
+  carrossel.parentElement.appendChild(verMaisButton);
 
   try {
  
@@ -39,11 +50,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     prevButton.addEventListener("click", () => moveCarrossel("prev"));
     nextButton.addEventListener("click", () => moveCarrossel("next"));
+
+    carrossel.addEventListener("scroll", () => {
+      const atEnd =
+        carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth;
+      if (atEnd) {
+        verMaisButton.style.display = "block";  
+      } else {
+        verMaisButton.style.display = "none";  
+      }
+    });
   } catch (error) {
     console.error("Erro ao carregar os eventos:", error);
   }
 
-  function hover() {
-    
-  }
+  
 });
