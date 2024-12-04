@@ -70,7 +70,9 @@ section h2 {
   background: none;
   border: none;
   cursor: pointer;
+ 
 }
+ 
 #more-options{
   display: grid;
 }

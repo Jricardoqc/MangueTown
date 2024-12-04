@@ -77,3 +77,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const mainEventContainer = document.getElementById("main-events");  
+
+  try {
+ 
+    const response = await fetch("http://localhost:5000/api/main-events");
+    const mainEvents = await response.json();
+ 
+    const mainEventImage = document.getElementById("imagem-destaque");
+    const mainEventDescription = document.getElementById("descricao-destaque");
+
+    if (mainEvents && mainEvents.length > 0) {
+      const firstEvent = mainEvents[0];  
+      mainEventImage.src = `http://localhost:5000${firstEvent.image}`;
+      mainEventDescription.innerHTML = `
+        <h2>${firstEvent.name}</h2>
+        <span>${firstEvent.date}</span>
+      `;
+    }
+  } catch (error) {
+    console.error("Erro ao carregar os eventos principais:", error);
+  }
+});
