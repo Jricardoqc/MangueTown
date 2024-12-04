@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     carrossel.innerHTML = "";
 
+    function formatDate(dateString) {
+      const options = { weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" };
+      const date = new Date(dateString);
+      return date.toLocaleDateString("pt-BR", options).toUpperCase();  
+    } 
+
     events.forEach((event) => {
       const eventElement = document.createElement("div");
 
@@ -14,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <a href="" class="eventinho">
         <img src="http://localhost:5000${event.image}" alt="${event.name}">
         <div id="descricao-eventinho">
-          <span class="data">${event.date}</span>
+          <span class="data">${formatDate(event.date)}</span>
           <p>${event.name}</p>
           <span>${event.location}</span>
         </div>
