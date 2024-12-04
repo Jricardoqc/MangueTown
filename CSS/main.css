@@ -22,9 +22,32 @@ main{
   margin-left: 98px;
   justify-self: left;
 }
-#imagem-destaque{
-  width: 800px;
+#carrossel{
+  display: flex;
+  max-width: 1305px;
+  align-items: center;
+  justify-items: center;
+  /* width: 100%; */
+  gap: 50px;
+}
+.carousel-button{
+  cursor: pointer;
+  z-index: 10;
+}
+.imagem-destaque{
+  display: flex;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  /* width: 800px; */
   height: 450px;
+}
+.imagem-destaque img{
+  width: 100%;
   border-radius: 5px;
 }
 #imagem{
@@ -58,13 +81,7 @@ main{
   text-transform: uppercase;
   font-size: 10px;
 }
-#carrossel{
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  /* width: 100%; */
-  gap: 50px;
-}
+
 #bolinhas{
   display: flex;
   /* justify-self: center; */

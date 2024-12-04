@@ -1,13 +1,42 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const carrossel = document.getElementById("carrossel-eventinhos");  
+  const carrossel = document.getElementById("carrossel-eventinhos");
+
+  const imagesContainer = document.querySelector(".imagem-destaque");
+  const images = document.querySelectorAll(".imagem-destaque img");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+
+  let indiceAtual = 0;
+
+  // Função para atualizar o deslocamento do carrossel
+  function updateCarousel() {
+    const width = images[0].clientWidth;
+    imagesContainer.style.transform = `translateX(-${indiceAtual * width}px)`;
+  }
+
+  // Evento para botão "Próximo"
+  nextButton.addEventListener("click", () => {
+    indiceAtual = (indiceAtual + 1) % images.length; // Volta para o início no final
+    updateCarousel();
+  });
+
+  // Evento para botão "Anterior"
+  prevButton.addEventListener("click", () => {
+    indiceAtual = (indiceAtual - 1 + images.length) % images.length; // Volta para o fim se for o início
+    updateCarousel();
+  });
+  
+  // Ajusta o carrossel quando a janela é redimensionada
+  window.addEventListener("resize", updateCarousel);
+
   const verMaisButton = document.createElement("div");
 
   verMaisButton.id = "ver-mais-btn";
   verMaisButton.textContent = "Ver mais eventos";
-  verMaisButton.style.display = "none"; 
+  verMaisButton.style.display = "none";
   verMaisButton.style.marginTop = "20px";
   verMaisButton.addEventListener("click", () => {
-    window.location.href = "/events-page.html";
+    window.location.href = "../HTML/events.html";
   });
 
   carrossel.parentElement.appendChild(verMaisButton);
@@ -64,16 +93,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       const atEnd =
         carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth;
       if (atEnd) {
-        verMaisButton.style.display = "block";  
+        verMaisButton.style.display = "block";
       } else {
-        verMaisButton.style.display = "none";  
+        verMaisButton.style.display = "none";
       }
     });
   } catch (error) {
     console.error("Erro ao carregar os eventos:", error);
   }
 
-  function hover() {
-    
-  }
+  function hover() {}
 });
