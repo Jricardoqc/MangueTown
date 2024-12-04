@@ -49,13 +49,14 @@ main{
 #descricao-destaque p{
   width: 229.64px;
 }
-#view-all{
+#view-event{
   display: grid;
   gap: 10px;
   justify-items: center;
 }
-#view-all span{
+#view-event span{
   text-transform: uppercase;
+  font-size: 10px;
 }
 #carrossel{
   display: flex;
