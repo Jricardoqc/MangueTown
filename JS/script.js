@@ -23,26 +23,28 @@ document.addEventListener("DOMContentLoaded", async () => {
       carrossel.appendChild(eventElement);
     });
 
-    
+    function moveCarrossel(direction) {
+      const scrollAmount = 300;  
+
+      if (direction === "next") {
+        carrossel.scrollLeft += scrollAmount; 
+      } else if (direction === "prev") {
+        carrossel.scrollLeft -= scrollAmount;  
+      }
+    }
+ 
     const prevButton = document.getElementById("prev-btn");
     const nextButton = document.getElementById("next-btn");
 
     prevButton.addEventListener("click", () => moveCarrossel("prev"));
     nextButton.addEventListener("click", () => moveCarrossel("next"));
 
-    carrossel.addEventListener("scroll", () => {
-      const atEnd =
-        carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth;
-      if (atEnd) {
-        verMaisButton.style.display = "block";
-      } else {
-        verMaisButton.style.display = "none";
-      }
-    });
   } catch (error) {
     console.error("Erro ao carregar os eventos:", error);
   }
 
+
+  
   document.addEventListener("DOMContentLoaded", async () => {
     const mainEventContainer = document.getElementById("main-events");  
   
