@@ -32,7 +32,6 @@ section h2 {
   gap: 10px;
   flex: 0 0 20%;
   scroll-snap-align: start;
-  /* margin-right: 20px; */
   justify-content: left;
   box-sizing: border-box;
   padding: 4px;
