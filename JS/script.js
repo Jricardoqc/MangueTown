@@ -1,21 +1,28 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const carrossel = document.getElementById("carrossel-eventinhos");
+  const dateFilter = document.getElementById("dateFilter");
 
-  try {
-    const response = await fetch("http://localhost:5000/api/events");
-    const events = await response.json();
-
-    carrossel.innerHTML = "";
-
-    function formatDate(dateString) {
-      const options = { weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" };
-      const date = new Date(dateString);
-      return date.toLocaleDateString("pt-BR", options).toUpperCase();  
-    } 
+  let allEvents = [];
+ 
+  async function loadEvents() {
+    try {
+      const response = await fetch("http://localhost:5000/api/events");
+      allEvents = await response.json();  
+      displayEvents(allEvents);
+    } catch (error) {
+      console.error("Erro ao carregar os eventos:", error);
+    }
+  }
+ 
+  function displayEvents(events) {
+    carrossel.innerHTML = "";  
+    if (events.length === 0) {
+      carrossel.innerHTML = "<p>Nenhum evento encontrado para esta data.</p>";
+      return;
+    }
 
     events.forEach((event) => {
       const eventElement = document.createElement("div");
-
       eventElement.innerHTML = `
       <a href="" class="eventinho">
         <img src="http://localhost:5000${event.image}" alt="${event.name}">
@@ -28,26 +35,26 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
       carrossel.appendChild(eventElement);
     });
-
-    function moveCarrossel(direction) {
-      const scrollAmount = 300;  
-
-      if (direction === "next") {
-        carrossel.scrollLeft += scrollAmount; 
-      } else if (direction === "prev") {
-        carrossel.scrollLeft -= scrollAmount;  
-      }
-    }
- 
-    const prevButton = document.getElementById("prev-btn");
-    const nextButton = document.getElementById("next-btn");
-
-    prevButton.addEventListener("click", () => moveCarrossel("prev"));
-    nextButton.addEventListener("click", () => moveCarrossel("next"));
-
-  } catch (error) {
-    console.error("Erro ao carregar os eventos:", error);
   }
-});
-
  
+  function formatDate(dateString) {
+    const options = { weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" };
+    const date = new Date(dateString);
+    return date.toLocaleDateString("pt-BR", options).toUpperCase();
+  }
+ 
+  dateFilter.addEventListener("change", () => {
+    const selectedDate = dateFilter.value; 
+    if (selectedDate) {
+      const filteredEvents = allEvents.filter((event) => {
+        const eventDate = new Date(event.date).toISOString().split("T")[0];  
+        return eventDate === selectedDate;
+      });
+      displayEvents(filteredEvents);
+    } else {
+      displayEvents(allEvents); 
+    }
+  });
+ 
+  loadEvents();
+});
