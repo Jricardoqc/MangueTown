@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const carrossel = document.getElementById("carrossel-eventinhos");  
-  const verMaisButton = document.createElement("button");
+  const verMaisButton = document.createElement("div");
 
   verMaisButton.id = "ver-mais-btn";
   verMaisButton.textContent = "Ver mais eventos";
   verMaisButton.style.display = "none"; 
   verMaisButton.style.marginTop = "20px";
   verMaisButton.addEventListener("click", () => {
-    window.location.href = "/events-page.html";  
+    window.location.href = "/events-page.html";
   });
 
   carrossel.parentElement.appendChild(verMaisButton);
