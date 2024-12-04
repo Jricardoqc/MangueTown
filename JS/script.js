@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
       </a>
       `;
-
       carrossel.appendChild(eventElement);
     });
 
@@ -34,9 +33,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         valorAtual = valorAtual + 1;
       } else if (direction === "prev") {
         carrossel.scrollLeft -= scrollAmount;
-        valorAtual =  valorAtual - 1;
+        valorAtual = valorAtual - 1;
       }
-      console.log(valorAtual)
+      console.log(valorAtual);
     }
 
     function changeButton(scrollAmount) {
@@ -54,5 +53,4 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function hover() {}
-
 });
