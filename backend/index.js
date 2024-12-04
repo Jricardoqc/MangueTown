@@ -10,7 +10,7 @@ app.use("/images", express.static("public/images"));
 const events = [
   {
     id: 1,
-    name: "No Ar Coquetel Molotov",
+    name: "Coquetel Molotov Live",
     date: "SAT · DEZ 07 · 16:00",
     image: "/images/Coquetel Event.jpg",
     location: "Campus UFPE - Recife, PE",  
@@ -31,28 +31,28 @@ const events = [
   },
   {
     id: 4,
-    name: "Caixa de Natal",
+    name: "Christmas Box Choral",
     date: "SUN · DEZ 01 · 18:00",
     image: "/images/Caixa de natal Event.jpg",
     location: "Caixa Cultural, Marco Zero - Recife, PE",  
   },
   {
     id: 5,
-    name: "Abertura do Natal do Recife",
+    name: "Recife's Christmas Opening",
     date: "SUN · DEZ 01 · 18:00",
     image: "/images/abertura-natal.jpg",
     location: "Parque Dona Lindu - Recife, PE",  
   },
   {
     id: 6,
-    name: "Cantata Natalina",
+    name: "Christmas Cantata",
     date: "TUES · DEZ 03 · 18:30",
     image: "/images/Cantata natalina Event.jpg",
     location: "Teatro Luiz Mendonça, Parque Dona Lindu - Recife, PE",  
   },
   {
     id: 7,
-    name: "Colgate Clássicos",
+    name: "Colgate Classics",
     date: "SUN · DEZ 01 · 16:00",
     image: "/images/Colgate classico Event.jpg",
     location: "Parque da Macaxeira - Recife, PE",  
