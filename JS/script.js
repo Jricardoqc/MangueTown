@@ -1,42 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const carrossel = document.getElementById("carrossel-eventinhos");
 
-  const imagesContainer = document.querySelector(".imagem-destaque");
-  const images = document.querySelectorAll(".imagem-destaque img");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-
-  let indiceAtual = 0;
- 
-  function updateCarousel() {
-    const width = images[0].clientWidth;
-    imagesContainer.style.transform = `translateX(-${indiceAtual * width}px)`;
-  }
- 
-  nextButton.addEventListener("click", () => {
-    indiceAtual = (indiceAtual + 1) % images.length;  
-    updateCarousel();
-  });
- 
-  prevButton.addEventListener("click", () => {
-    indiceAtual = (indiceAtual - 1 + images.length) % images.length; 
-    updateCarousel();
-  });
-   
-  window.addEventListener("resize", updateCarousel);
-
-  const verMaisButton = document.createElement("div");
-
-  verMaisButton.id = "ver-mais-btn";
-  verMaisButton.textContent = "Ver mais eventos";
-  verMaisButton.style.display = "none";
-  verMaisButton.style.marginTop = "20px";
-  verMaisButton.addEventListener("click", () => {
-    window.location.href = "../HTML/events.html";
-  });
-
-  carrossel.parentElement.appendChild(verMaisButton);
-
   try {
     const response = await fetch("http://localhost:5000/api/events");
     const events = await response.json();
@@ -59,26 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       carrossel.appendChild(eventElement);
     });
 
-    function moveCarrossel(direction) {
-      const scrollAmount = carrossel.clientWidth / 3;
-      var i = 0;
-      var valorAtual = i;
-
-      if (direction === "next") {
-        carrossel.scrollLeft += scrollAmount;
-        valorAtual = valorAtual + 1;
-      } else if (direction === "prev") {
-        carrossel.scrollLeft -= scrollAmount;
-        valorAtual = valorAtual - 1;
-      }
-      console.log(valorAtual);
-    }
-
-    function changeButton(scrollAmount) {
-      if (scrollAmount > 0) {
-      }
-    }
-
+    
     const prevButton = document.getElementById("prev-btn");
     const nextButton = document.getElementById("next-btn");
 
