@@ -29,7 +29,7 @@ section h2 {
 }
 .eventinho {
   display: grid;
-  gap: 15px;
+  gap: 10px;
   flex: 0 0 20%;
   scroll-snap-align: start;
   /* margin-right: 20px; */
