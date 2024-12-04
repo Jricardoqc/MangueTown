@@ -49,6 +49,14 @@ main{
 #descricao-destaque p{
   width: 229.64px;
 }
+#view-all{
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+#view-all span{
+  text-transform: uppercase;
+}
 #carrossel{
   display: flex;
   align-items: center;
