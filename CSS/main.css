@@ -36,9 +36,7 @@ main{
 }
 .imagem-destaque{
   display: flex;
-  width: 80%;
   position: relative;
-  overflow: hidden;
   transition: transform 0.5s ease-in-out;
   scroll-snap-align: start;
   scroll-snap-type: x mandatory;
@@ -52,18 +50,19 @@ main{
 }
 #imagem{
   display: flex;
+  overflow: hidden;
+  width: 80%;
+
 }
 #descricao-destaque{
   display: grid;
-  width: 340px;
+  width: 30%;
+  height: 100%;
   align-content: space-evenly;
   justify-content: center;
   justify-items: center;
   border: 1px solid #822b1b80;
-  border-left: 0;
   border-radius: 5px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
   gap: 20px;
 }
 #descricao-destaque h2, p{
