@@ -47,6 +47,7 @@ main{
 .imagem-destaque img{
   width: 100%;
   border-radius: 5px;
+  object-fit:cover
 }
 #imagem{
   display: flex;
