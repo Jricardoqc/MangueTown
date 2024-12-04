@@ -7,26 +7,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   const nextButton = document.querySelector(".next");
 
   let indiceAtual = 0;
-
-  // Função para atualizar o deslocamento do carrossel
+ 
   function updateCarousel() {
     const width = images[0].clientWidth;
     imagesContainer.style.transform = `translateX(-${indiceAtual * width}px)`;
   }
-
-  // Evento para botão "Próximo"
+ 
   nextButton.addEventListener("click", () => {
-    indiceAtual = (indiceAtual + 1) % images.length; // Volta para o início no final
+    indiceAtual = (indiceAtual + 1) % images.length;  
     updateCarousel();
   });
-
-  // Evento para botão "Anterior"
+ 
   prevButton.addEventListener("click", () => {
-    indiceAtual = (indiceAtual - 1 + images.length) % images.length; // Volta para o fim se for o início
+    indiceAtual = (indiceAtual - 1 + images.length) % images.length; 
     updateCarousel();
   });
-  
-  // Ajusta o carrossel quando a janela é redimensionada
+   
   window.addEventListener("resize", updateCarousel);
 
   const verMaisButton = document.createElement("div");
