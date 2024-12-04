@@ -92,11 +92,67 @@ const events = [
     location: "Parque da Macaxeira - Recife, PE",  
   },
 ];
+
+const mainEvents = [
+  {
+  id: 101,
+  name: "avesso",
+  date: "SUN · DEZ 01 · 16:00",
+  image: "/images/avesso.webp",
+  location: "#",
+},
+  {
+  id: 102,
+  name: "#",
+  date: "#",
+  image: "#",
+  location: "#",
+},
+  {
+  id: 103,
+  name: "#",
+  date: "#",
+  image: "#",
+  location: "#",
+},
+  {
+  id: 104,
+  name: "#",
+  date: "#",
+  image: "#",
+  location: "#",
+},
+  {
+  id: 105,
+  name: "#",
+  date: "#",
+  image: "#",
+  location: "#",
+},
+  {
+  id: 106,
+  name: "#",
+  date: "#",
+  image: "#",
+  location: "#",
+},
+  {
+  id: 107,
+  name: "#",
+  date: "#",
+  image: "#",
+  location: "#",
+},
+]
  
 app.get("/api/events", (req, res) => {
   res.json(events);
 });
  
+app.get("/api/main-events", (req, res) => {
+  res.json(mainEvents);
+});
+
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on PORT: ${PORT} :D`);
