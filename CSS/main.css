@@ -19,7 +19,6 @@ main{
 }
 #main-events h1{
   color: #F62F00;
-  margin-left: 98px;
   justify-self: left;
 }
 #carrossel{
@@ -30,34 +29,15 @@ main{
   /* width: 100%; */
   gap: 50px;
 }
-.carousel-button{
-  cursor: pointer;
-  z-index: 10;
-}
-.imagem-destaque{
-  display: flex;
-  position: relative;
-  transition: transform 0.5s ease-in-out;
-  scroll-snap-align: start;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  /* width: 800px; */
-  height: 450px;
-}
-.imagem-destaque img{
-  width: 100%;
+#imagem-destaque{
   border-radius: 5px;
-  object-fit:cover
-}
-#imagem{
-  display: flex;
-  overflow: hidden;
-  width: 80%;
-
+  object-fit:cover;
+  width: 800px;
+  height: 450px;
 }
 #descricao-destaque{
   display: grid;
-  width: 30%;
+  width: 400px;
   height: 100%;
   align-content: space-evenly;
   justify-content: center;
