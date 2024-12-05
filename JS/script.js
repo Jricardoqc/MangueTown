@@ -92,33 +92,31 @@ document.addEventListener("DOMContentLoaded", async () => {
   const absoluteElement = document.getElementById("comprar-cigarro");
 
   // Função que verifica a posição da rolagem e oculta o elemento
-  function handleScroll() {
+  function sumirH1() {
     const scrollY = window.scrollY; // Obtém a posição atual da barra de rolagem
     if (scrollY > 100) {
       absoluteElement.classList.add("sumir"); // Adiciona a classe que oculta suavemente
-    }
-    else {
+    } else {
       absoluteElement.classList.remove("sumir"); // Remove a classe, tornando o elemento visível
     }
   }
-  
-    // Adiciona o evento de scroll na janela
-  
-    const header = document.getElementById("headerEvents");
-    const background = document.getElementById("imagem-background");
-    
-    // Função para verificar o scroll e adicionar/remover a classe
-    function handleScroll() {
-      if (window.scrollY+100 > background.clientHeight) {
-        header.classList.add("background-header");
-      } else {
-        header.classList.remove("background-header");
-      }
-    }
-    
-    // Adiciona o evento de scroll
-  
-  window.addEventListener("scroll", handleScroll);
-    
-});
+  window.addEventListener("scroll", sumirH1);
 
+  // Adiciona o evento de scroll na janela
+
+  const header = document.getElementById("headerEvents");
+  const background = document.getElementById("imagem-background");
+
+  // Função para verificar o scroll e adicionar/remover a classe
+  function handleScroll() {
+    if (window.scrollY + 200 > background.clientHeight) {
+      header.classList.add("background-header");
+    } else {
+      header.classList.remove("background-header");
+    }
+  }
+
+  // Adiciona o evento de scroll
+
+  window.addEventListener("scroll", handleScroll);
+});
