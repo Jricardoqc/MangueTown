@@ -34,7 +34,7 @@ main{
   cursor: pointer;
   z-index: 10;
 }
-.imagem-destaque{
+#imagem-destaque{
   display: flex;
   position: relative;
   transition: transform 0.5s ease-in-out;
@@ -44,7 +44,7 @@ main{
   /* width: 800px; */
   height: 450px;
 }
-.imagem-destaque img{
+#imagem-destaque img{
   width: 100%;
   border-radius: 5px;
   object-fit:cover
