@@ -1,0 +1,14 @@
+main{
+}
+#imagem-background{
+  background-image: url(../Img/paginaEvents/img-20180218-170332851-hdr-scaled.jpg);
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  position: relative;
+}
+#imagem-background h1{
+  color: #F62F00;
+}

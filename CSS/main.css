@@ -6,7 +6,7 @@ h1, h2, p{
   gap: 20px;
   justify-content: center;
 }
-main{
+.main{
   display: grid;
   margin-top: 100px;
   align-items: flex-start;
