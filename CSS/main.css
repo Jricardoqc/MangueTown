@@ -6,7 +6,7 @@ h1, h2, p{
   gap: 20px;
   justify-content: center;
 }
-main{
+.main{
   display: grid;
   margin-top: 100px;
   align-items: flex-start;
@@ -19,7 +19,6 @@ main{
 }
 #main-events h1{
   color: #F62F00;
-  margin-left: 98px;
   justify-self: left;
 }
 #carrossel{
@@ -30,21 +29,13 @@ main{
   /* width: 100%; */
   gap: 50px;
 }
-.carousel-button{
-  cursor: pointer;
-  z-index: 10;
-}
 #imagem-destaque{
-  display: flex;
-  position: relative;
-  transition: transform 0.5s ease-in-out;
-  scroll-snap-align: start;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  /* width: 800px; */
+  border-radius: 5px;
+  object-fit:cover;
+  width: 800px;
   height: 450px;
 }
-#imagem-destaque img{
+.imagem-destaque img{
   width: 100%;
   border-radius: 5px;
   object-fit:cover
@@ -57,7 +48,7 @@ main{
 }
 #descricao-destaque{
   display: grid;
-  width: 30%;
+  width: 400px;
   height: 100%;
   align-content: space-evenly;
   justify-content: center;

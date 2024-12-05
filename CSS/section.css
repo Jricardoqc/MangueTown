@@ -7,7 +7,7 @@ section {
 section h2 {
   color: #f62f00;
 }
-#Events {
+.Events {
   display: flex;
   justify-content: space-between;
 }
