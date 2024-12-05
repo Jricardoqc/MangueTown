@@ -1,6 +1,6 @@
-header{
+#headerEvents{
   display: flex;
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 100px;
   position: fixed;
   width: 100%;

@@ -1,14 +1,89 @@
 main{
 }
+.centralizar-events{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 #imagem-background{
   background-image: url(../Img/paginaEvents/img-20180218-170332851-hdr-scaled.jpg);
-  height: 1000px;
+  height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   display: flex;
   position: relative;
+  z-index: -2;
 }
 #imagem-background h1{
+  position: absolute;
+  width: 470px;
+  left: 100px;
+  top: 200px;
   color: #F62F00;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.sumir {
+  opacity: 0; /* Torna o elemento invisível */
+  transform: scale(0.9); /* Diminui levemente o tamanho para um efeito mais natural */
+}
+.overlay{
+  align-self:self-end;
+  width: 100%;
+  height: 20%;
+  background-image: linear-gradient(to top, #fff 0%, rgba(0, 0, 255, 0) 100%);
+  z-index: -1;
+}
+#todos-eventos{
+  display: grid;
+  overflow: hidden;
+  width: ;
+  gap: 50px;
+}
+.eventos{
+  display: flex;
+  width: 51%;
+  flex-direction: column;
+  background: none;
+  padding: 20px;
+  padding-right: 0;
+  gap: 50px;
+}
+.botoes{
+  display: flex;
+  gap: 20px;
+  margin-right: 3%;
+}
+.botoes button {
+  background: none;
+  border: none;
+  cursor: pointer;
+ 
+}
+.events-carrossel{
+  display: flex;
+  overflow: hidden;
+  gap: 3%;
+  /* height: 280px; */
+  /* width: min-content; */
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.evento-div{
+  display: grid;
+  gap: 20px;
+}
+.evento-div-descricao{
+  display: grid;
+  gap: 5px;
+}
+.data ,.localizacao{
+  font-size: 16px;
+  color: #822b1bfa;
+}
+.titulo{
+  font-family: "Aeonik-bold";
+  color: #F62F00;
+  font-size: 20px;
 }
