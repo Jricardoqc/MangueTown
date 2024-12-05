@@ -43,13 +43,17 @@ main{
 }
 .eventos{
   display: flex;
-  width: 51%;
   flex-direction: column;
   background: none;
   padding: 20px;
   padding-right: 0;
   gap: 50px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  position: relative;
 }
+
 .botoes{
   display: flex;
   gap: 20px;
@@ -62,15 +66,13 @@ main{
  
 }
 .events-carrossel{
-  display: flex;
-  overflow: hidden;
-  gap: 3%;
-  /* height: 280px; */
-  /* width: min-content; */
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
 }
+
 .evento-div{
   display: grid;
   gap: 20px;
