@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./../JS/script-events.js" defer></script>
+  <script type="module" src="./../JS/script.js" defer></script>
   <title>MangueTown</title>
   <link rel="stylesheet" href="../CSS/style.css">
   <style>
@@ -293,15 +295,17 @@
       <div class="Events">
         <h2>Fun for the Whole Family!</h2>
         <div class="events-carrossel">
-          <button id="prev-btn">
-            <img src="../IMG/section/Botão E=ativo.png" alt="">
-            <div class="evento-div">
-
-            </div>
-          </button>
-          <button id="next-btn">
-            <img src="../IMG/section/Botão D=ativo.png" alt="">
-          </button>
+          <div class="botoes">
+            <button id="prev-btn">
+              <img src="../IMG/section/Botão E=ativo.png" alt="">
+              <div class="evento-div">
+  
+              </div>
+            </button>
+            <button id="next-btn">
+              <img src="../IMG/section/Botão D=ativo.png" alt="">
+            </button>
+          </div>
         </div>
       </div>
       <div class="events-carrossel">
@@ -412,7 +416,6 @@
     <div id="linha"></div>
     <p id="direitos">© MangueTown. All rights reserved.</p>
   </footer>
-  <script type="module" src="../JS/script-events.js"></script>
 </body>
 
 </html>

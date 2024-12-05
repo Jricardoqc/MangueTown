@@ -95,13 +95,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   function handleScroll() {
     const scrollY = window.scrollY; // Obtém a posição atual da barra de rolagem
     if (scrollY > 100) {
-      // Oculta o elemento quando o scroll for maior que 300px
       absoluteElement.classList.add("sumir"); // Adiciona a classe que oculta suavemente
-    } else {
+    }
+    else {
       absoluteElement.classList.remove("sumir"); // Remove a classe, tornando o elemento visível
     }
   }
-
-  // Adiciona o evento de scroll na janela
+  
+    // Adiciona o evento de scroll na janela
+  
+    const header = document.getElementById("headerEvents");
+    const background = document.getElementById("imagem-background");
+    
+    // Função para verificar o scroll e adicionar/remover a classe
+    function handleScroll() {
+      if (window.scrollY+100 > background.clientHeight) {
+        header.classList.add("background-header");
+      } else {
+        header.classList.remove("background-header");
+      }
+    }
+    
+    // Adiciona o evento de scroll
+  
   window.addEventListener("scroll", handleScroll);
+    
 });
+

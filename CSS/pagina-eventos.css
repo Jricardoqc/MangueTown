@@ -69,7 +69,7 @@ main{
   display: grid;
   grid-gap: 16px;
   grid-auto-flow: column;
-  margin: auto;
+  /* margin: auto; */
   box-sizing: border-box;
 }
 

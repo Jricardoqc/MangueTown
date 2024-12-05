@@ -9,6 +9,11 @@
   gap: 20px;
   /* margin-top: 30px; */
   z-index: 1000;
+  transition: 0.5s;
+}
+.background-header{
+  background-color: #fff;
+  transition: 0.5s;
 }
 #barra-pesquisa{
   display: flex;
