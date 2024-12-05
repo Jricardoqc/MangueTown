@@ -7,6 +7,7 @@ main{
 }
 #imagem-background{
   background-image: url(../Img/paginaEvents/img-20180218-170332851-hdr-scaled.jpg);
+  width: 100%;
   height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +38,7 @@ main{
 #todos-eventos{
   display: grid;
   overflow: hidden;
-  width: ;
+  /* width: ; */
   gap: 50px;
 }
 .eventos{
