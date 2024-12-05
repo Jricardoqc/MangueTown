@@ -58,3 +58,7 @@ a{
   cursor: pointer;
   filter: invert(50%);
 }
+
+::placeholder {
+  font-size: 14px;
+}

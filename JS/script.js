@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
+
   const carrossel = document.getElementById("carrossel-eventinhos");
   const dateFilter = document.getElementById("dateFilter");
+  const searchInput = document.getElementById("txtBusca");
 
   let allEvents = [];
  
@@ -71,6 +73,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       displayEvents(allEvents); 
     }
+  });
+
+  searchInput.addEventListener("input", () => {
+    const searchQuery = searchInput.value.toLowerCase();
+    const filteredEvents = allEvents.filter((event) => event.name.toLowerCase().includes(searchQuery));
+    displayEvents(filteredEvents);
   });
  
   loadEvents();
