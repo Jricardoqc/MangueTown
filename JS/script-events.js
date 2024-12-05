@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const carrossel = document.querySelector(".event-carrossel");
+    const carrossel = document.querySelector(".events-carrossel");
     const prevButton = document.querySelector("#prev-btn");
     const nextButton = document.querySelector("#next-btn");
    
