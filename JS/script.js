@@ -35,12 +35,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
       carrossel.appendChild(eventElement);
     });
+
+    function moveCarrossel(direction) {
+      const scrollAmount = carrossel.clientWidth / 3;  
+
+      if (direction === "next") {
+        carrossel.scrollLeft += scrollAmount;  
+      } else if (direction === "prev") {
+        carrossel.scrollLeft -= scrollAmount;  
+      }
+    }
+
+    const prevButton = document.getElementById("prev-btn");
+    const nextButton = document.getElementById("next-btn");
+
+    prevButton.addEventListener("click", () => moveCarrossel("prev"));
+    nextButton.addEventListener("click", () => moveCarrossel("next"));
+
   }
  
   function formatDate(dateString) {
     const options = { weekday: "short", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" };
     const date = new Date(dateString);
-    return date.toLocaleDateString("pt-BR", options).toUpperCase();
+    return date.toLocaleDateString("en-US", options).toUpperCase();
   }
  
   dateFilter.addEventListener("change", () => {
